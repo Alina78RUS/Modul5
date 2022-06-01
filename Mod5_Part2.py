@@ -9,12 +9,12 @@ import json
 class Model:
 
 	def __init__(self):
-		self.dictionary = {}
-	
+					self.dictionary = {}
+				
 	def save (self, key, value):
 		self.key = key
 		self.value = value
-		self.dictionary[self.key] = self.value 
+		self.dictionary = {self.key:self.value} 
 		with open ('Modul5,Part2','w') as f:
 			json.dump(self.dictionary, f)
 		return self.dictionary
